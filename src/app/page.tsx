@@ -61,9 +61,9 @@ export default function LandingPage() {
               M
             </span>
             <span className="text-sm font-black tracking-widest text-bright">MARKETAI</span>
-            <span className="ml-2 rounded-md border border-warn/30 bg-warn/10 px-2 py-0.5 text-[10px] font-bold text-warn">
-              DEMO DATA
-            </span>
+           <span className="ml-2 rounded-md border border-line bg-panel-2/70 px-2 py-0.5 text-[10px] font-bold text-muted">
+            MARKET ANALYSIS
+        </span>
           </div>
           <nav className="flex items-center gap-2">
             <Link
