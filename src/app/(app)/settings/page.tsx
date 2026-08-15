@@ -108,15 +108,11 @@ export default function SettingsPage() {
         </Card>
 
         <Card title="Data providers" icon={<Database className="h-4 w-4 text-info" />} bodyClassName="space-y-3 p-4">
-          <Field label="Provider mode" hint="AUTO uses configured vendors and falls back to demo data when credentials are absent.">
-            <Segmented
-              value={draft.dataProvider}
-              onChange={(v) => set("dataProvider", v)}
-              options={[
-                { value: "AUTO", label: "Auto" },
-                { value: "MOCK", label: "Demo only" },
-              ]}
-            />
+          <Field label="Provider mode"hint="AUTO uses configured real vendors. In REAL mode, unavailable or rate-limited providers are never replaced with demo data.">
+           <div className="rounded-lg border border-line bg-panel-2/50 px-3 py-2 text-xs text-muted">
+              Data provider mode is controlled by the server environment variable{" "}
+           <code className="num">MOCK_MODE</code>. Current mode is shown below.
+           </div>
           </Field>
           <div className="space-y-2">
             {data?.services.map((p) => (
