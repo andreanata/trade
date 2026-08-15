@@ -244,7 +244,7 @@ export function aiVendor(): VendorConfig & { model: string } {
 
 export const tuning = {
   get realScanLimit() {
-    return num("REAL_SCAN_LIMIT", 12);
+    return num("REAL_SCAN_LIMIT", 5);
   },
   get memeScanLimit() {
     return num("MEME_SCAN_LIMIT", 10);
